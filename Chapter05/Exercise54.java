@@ -13,6 +13,9 @@ public class Exercise54 {
 			count[arr[i]]++;
 			i++;
 		}
+//		for(int j=0;j<10000;j++) {
+//			count[random.nextInt(6)]++;
+//		}
 		System.out.println("면\t빈도\n");
 		for(int j=0;j<count.length;j++) {
 			System.out.println((j+1)+"\t"+count[j]);
