@@ -1,4 +1,4 @@
-package Chapter04;
+package chapter04;
 
 public class WhileSumFrom1To100Example {
 	public static void main(String[] args) {

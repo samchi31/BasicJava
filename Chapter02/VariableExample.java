@@ -1,4 +1,4 @@
-package Chapter02; 			// package : 폴더 개념
+package chapter02; 			// package : 폴더 개념
 
 public class VariableExample {
 	public static void main(String[] args) {

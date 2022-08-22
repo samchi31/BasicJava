@@ -1,4 +1,4 @@
-package Chapter05;
+package chapter05;
 
 public class ArrayCreateByValueListExample {
 	public static void main(String[] args) {
