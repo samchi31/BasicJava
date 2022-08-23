@@ -6,8 +6,9 @@ public class Car {
 	String model;// = "그랜저";
 	String color;// = "검정";
 	int maxSpeed;// = 350;
-	// int speed; // 초기값이 없지만 객체 생성 시 자동으로 default 초기값 삽입
 	int gas;
+	private int speed; // 초기값이 없지만 객체 생성 시 자동으로 default 초기값 삽입
+	private boolean stop;
 
 	// 생성자
 	Car() {
@@ -31,21 +32,43 @@ public class Car {
 	void setGas() {
 		this.gas = gas;
 	}
-	
+
 	boolean isLeftGas() {
 		return false;
 	}
-	
+
 	void run() {
-		while(true) {
-			if(gas>0) {
-				System.out.println("달립니다"+gas);
+		while (true) {
+			if (gas > 0) {
+				System.out.println("달립니다" + gas);
 				gas--;
-			}
-			else {
-				System.out.println("멈춥니다"+gas);
-				return;	// 메소드 종료 시킬 때 사용
+			} else {
+				System.out.println("멈춥니다" + gas);
+				return; // 메소드 종료 시킬 때 사용
 			}
 		}
+	}
+
+	// getter setter
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		if (speed < 0) {
+			this.speed = 0;
+			return;
+		} else {
+			this.speed = speed;
+		}
+	}
+
+	public boolean isStop() {
+		return stop;
+	}
+
+	public void setStop(boolean stop) {
+		this.stop = stop;
+		this.speed = 0;
 	}
 }
