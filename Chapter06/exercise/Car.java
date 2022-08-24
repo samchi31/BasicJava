@@ -3,6 +3,7 @@ package chapter06.exercise;
 public class Car {
 	private double speed;
 	private String color;
+	// TODO 나중에 해야할 일
 	private static final double MAX_SPEED = 200.0;
 
 	public Car() {
@@ -30,10 +31,18 @@ public class Car {
 	}
 
 	public boolean speedUp(double speed) {
-		if (this.speed + speed < 0 || this.speed + speed > MAX_SPEED) {
+//		if (this.speed + speed < 0 || this.speed + speed > MAX_SPEED) {
+//			return false;
+//		} else {
+//			this.speed += speed;
+//			return true;
+//		}
+		double newSpeed = this.speed + speed;
+		if(newSpeed > MAX_SPEED || newSpeed <0) {
 			return false;
-		} else {
-			this.speed += speed;
+		}
+		else {
+			this.speed = newSpeed; 
 			return true;
 		}
 	}
