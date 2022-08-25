@@ -18,8 +18,14 @@ public class BasicMath5 {
 			int h = Integer.parseInt(arrStr[0]);
 			int w = Integer.parseInt(arrStr[1]);
 			int n = Integer.parseInt(arrStr[2]);
-			int count = n / h + 1;
-			result[t]= (n - h * count) + String.format("%02d", count);
+			int count;
+			if(n % h == 0) {
+				count = n / h;
+				result[t]= h + String.format("%02d", count);
+			} else {
+				count = n / h + 1;
+				result[t]= (n % h) + String.format("%02d", count);
+			}
 		}
 		for (int i = 0; i < caseNum; i++) {
 			System.out.println(result[i]);
