@@ -14,13 +14,20 @@ public class CheckingAccount extends BankAccount {
 
 	@Override
 	public boolean withdraw(int amount) {
-		int money = super.balance - amount;
-		if (money <= 0) {
-			super.balance = 0;
-			protectedBy.withdraw(Math.abs(money));
+//		int money = super.balance - amount;
+//		if (money <= 0) {
+//			super.balance = 0;
+//			protectedBy.withdraw(Math.abs(money));
+//			return false;
+//		}
+//		super.balance -= amount;
+//		return true;
+		if (withdraw(amount)) {
+			return true;
+		} else {
+			protectedBy.balance -= amount - balance;
+			balance = 0;
 			return false;
 		}
-		super.balance -= amount;
-		return true;
 	}
 }

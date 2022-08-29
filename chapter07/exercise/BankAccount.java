@@ -1,7 +1,7 @@
 package chapter07.exercise;
 
 public class BankAccount {
-	//private int balance;
+	// private int balance;
 	protected int balance;
 
 	public BankAccount(int balance) {
@@ -12,10 +12,21 @@ public class BankAccount {
 		return this.balance;
 	}
 
+	/**
+	 * 입금 메서드
+	 * 
+	 * @param amount 입금 금액
+	 */
 	public void deposit(int amount) {
 		this.balance += amount;
 	}
 
+	/**
+	 * 출금 메서드
+	 * 
+	 * @param amount 출금 금액
+	 * @return 출금 성공 여부
+	 */
 	public boolean withdraw(int amount) {
 		if (this.balance - amount <= 0) {
 			return false;
@@ -25,15 +36,18 @@ public class BankAccount {
 	}
 
 	public boolean transfer(int amount, BankAccount otherAccount) {
-		if (this.balance - amount <= 0) {
-			return false;
+//		if (this.balance - amount <= 0) {
+//			return false;
+//		}
+//		this.balance -= amount;
+		if (withdraw(amount)) {
+			otherAccount.deposit(amount);
+			return true;
 		}
-		this.balance -= amount;
-		otherAccount.deposit(amount);
-		return true;
+		return false;
 	}
-	
+
 	public String toString() {
-		return "잔고:"+this.balance;
+		return "잔고:" + this.balance;
 	}
 }
