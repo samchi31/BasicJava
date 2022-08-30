@@ -1,4 +1,5 @@
 package codepractice.basicmath1;
+
 //부녀회장이 될꺼야
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,14 +14,20 @@ public class BasicMath6 {
 			int k = Integer.parseInt(br.readLine());
 			int n = Integer.parseInt(br.readLine());
 
+			System.out.println(method(k, n));
+
 		}
 	}
 
 	public static int method(int k, int num) {
-		
-		for(int i =0;i<k;i++) {
-			
+		if(k <= 0) {
+			return num;
 		}
-		return method(k-1, num-1) + num;
+		int sum = 0;
+		for(int i=1;i<=num;i++) {
+			//System.out.println((k-1) + "  " + i);
+			sum += method(k-1,i);
+		}
+		return sum;
 	}
 }
