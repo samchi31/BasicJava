@@ -5,12 +5,12 @@ public class CheckingAccount extends BankAccount{
 	private SavingsAccount protectedBy;
 	
 	public CheckingAccount(int balance) {
-		//super(balance);
+		super(balance);
 		this.balance = balance;
 	}
 	
 	public CheckingAccount(int balance, SavingsAccount protectedBy) {
-		//super(balance);
+		super(balance);
 		this.balance = balance;
 		this.protectedBy = protectedBy;
 	}

@@ -5,7 +5,7 @@ public class SavingsAccount extends BankAccount {
 	private int balance;
 
 	public SavingsAccount(int balance, double interestRate) {
-		//super(balance);
+		super(balance);
 		this.balance = balance;
 		this.interestRate = interestRate;
 	}

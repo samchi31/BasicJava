@@ -1,9 +1,9 @@
 package chapter09;
 
-public class OutterClass {
-	private int outterField;
+public class OuterClass {
+	private int outerField;
 	private InnerClass innerClass;
-	public OutterClass() {
+	public OuterClass() {
 		
 	}
 	
@@ -28,7 +28,7 @@ public class OutterClass {
 	}
 	
 	public int getOutterField() {
-		return outterField;
+		return outerField;
 	}
 	public void setOutterField() {
 		
