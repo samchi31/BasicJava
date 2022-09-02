@@ -1,4 +1,5 @@
-package chapter08.exercise;
+package chapter10.exercise;
+
 
 public class CheckingAccount extends BankAccount{
 	private int balance;
