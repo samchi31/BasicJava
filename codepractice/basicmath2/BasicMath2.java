@@ -1,5 +1,6 @@
 package codepractice.basicmath2;
 //소수
+// 다시 풀기
 
 import java.io.BufferedReader;
 import java.io.IOException;
