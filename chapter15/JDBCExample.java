@@ -29,7 +29,7 @@ public class JDBCExample {
 		sql+="     member";
 		// "select mem_id, mem_name, mem_hp, mem_mail from member";	
 		// alt+shift+a 로 여러줄 복사
-		// 앞이나 뒤에 공백이 없으면 error 발생
+		// 앞이나 뒤에 공백이 없으면 error 발생 (문자열을 연결하면 명령어 인식 안됨)
 		
 		// 3. 쿼리 실행
 		ResultSet resultSet = statement.executeQuery(sql); 
@@ -46,7 +46,7 @@ public class JDBCExample {
 			System.out.printf("%s\t%s\t%s\t%s\n",memId,memName,memHp,memMail);
 		}
 		
-		// 5. 접속 종료
+		// 5. 접속 종료 (자원 반납)
 		resultSet.close();
 		statement.close();
 		connection.close();
