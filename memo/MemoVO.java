@@ -13,7 +13,20 @@ public class MemoVO {
 	
 	public MemoVO() {
 	}
-	
+
+	public MemoVO(String title, String content, String writer) {
+		this.title = title;
+		this.content = content;
+		this.writer = writer;
+	}
+
+	public MemoVO(int no, String title, String content, String writer) {
+		this.no = no;
+		this.title = title;
+		this.content = content;
+		this.writer = writer;
+	}
+
 	public MemoVO(int no, String title, String content, String writer, Date registerDate, Date modifyDate) {
 		this.no = no;
 		this.title = title;
